@@ -31,10 +31,9 @@ RSpec.describe 'Subscription Requests' do
       }
 
       expect(subscription_1.status).to eq('active')
-      binding.pry
       patch 'http://localhost:3000/api/v1/customers/subscriptions/1', params: update_params
-      
-      expect(subscription_1.status).to eq('cancelled')
+      sub_1 = Subscription.find_by(id:1)
+      expect(sub_1.status).to eq('cancelled')
     end
   end
 end
