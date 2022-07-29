@@ -1,6 +1,11 @@
 class Api::V1::Customers::SubscriptionsController < ApplicationController
   before_action :set_customer, only: [:index, :create]
 
+  def index
+    subscriptions = @customer.subscriptions
+    render json: SubscriptionSerializer.new(subscriptions)
+  end
+
   def create
     subscription = @customer.subscriptions.create!(subscription_params)
     render json: SubscriptionSerializer.new(subscription), status: 201
