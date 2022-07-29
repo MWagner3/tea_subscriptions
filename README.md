@@ -1,24 +1,22 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is an API that allows users to request to create/update/view teas, users, and subscriptions.
 
-Things you may want to cover:
+## Schema
 
-* Ruby version
 
-* System dependencies
 
-* Configuration
+## Endpoints
 
-* Database creation
+To verify the examples in this documentation, follow the setup instructions below.
 
-* Database initialization
+## Setup
 
-* How to run the test suite
+Clone down this repo and ensure that you have Ruby 2.7.4 installed on your computer.
 
-* Services (job queues, cache servers, search engines, etc.)
+CD into this directory and run `bundle install`.
 
-* Deployment instructions
+This will make sure all of the dependencies are installed.
 
-* ...
+
+Next run, `rails db:{create,migrate,seed}` . This will create and run the migrations on our database.
